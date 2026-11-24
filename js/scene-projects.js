@@ -1,6 +1,6 @@
 function scene_projects() {
   var projects = DATA.projects.slice();
-  App.initScene({ active: "projects", yaw: 0.25, pitch: 0.4, dist: 15, ty: 0.5, update: function () { scene.rotation.y += 0.0006; } });
+  App.initScene({ active: "projects", yaw: 0.25, pitch: 0.4, dist: 15, ty: 0.5, update: function () { App.scene().rotation.y += 0.0006; } });
   // 3D showcase arc of project cards
   var R = 7, count = projects.length, i, p;
   for (i = 0; i < count; i++) {

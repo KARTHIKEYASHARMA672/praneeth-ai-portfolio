@@ -1,5 +1,5 @@
 function scene_experience() {
-  App.initScene({ active: "experience", yaw: 0, pitch: 0.5, dist: 12, ty: 0.2, update: function () { scene.rotation.y += 0.0004; } });
+  App.initScene({ active: "experience", yaw: 0, pitch: 0.5, dist: 12, ty: 0.2, update: function () { App.scene().rotation.y += 0.0004; } });
   var items = DATA.experience;
   var colors = ["#e3b34a", "#6d8dff", "#38bdf8", "#9d6c47"];
   items.forEach(function (it, i) {

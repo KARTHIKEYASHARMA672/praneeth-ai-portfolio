@@ -138,11 +138,10 @@
       var hits = raycaster.intersectObjects(scene.children, true);
       var best = null;
       for (var i = 0; i < hits.length; i++) {
-        var o = hits[i].object, m = o.userData && o.userData.meta;
-        if (!m) { var p = o.parent && o.parent.userData ? o.parent.userData.meta : null; m = p || o.userData.onClick ? (o.parent && o.parent.userData.meta) : null; }
-        var onClick = o.userData && o.userData.onClick;
-        var meta = o.userData.meta || (o.parent && o.parent.userData.meta);
-        if (meta || onClick) { best = meta || onClick; break; }
+        var o = hits[i].object;
+        var onClick = (o.userData && o.userData.onClick) || (o.parent && o.parent.userData && o.parent.userData.onClick);
+        var meta = (o.userData && o.userData.meta) || (o.parent && o.parent.userData && o.parent.userData.meta);
+        if (onClick || meta) { best = meta || onClick; break; }
       }
       if (best) { var fn = typeof best === "function" ? best : best.onClick; if (fn) fn(); }
     });
@@ -188,6 +187,7 @@
 
   window.App = {
     DATA: window.DATA, initScene, addCard, addCubes, addParticles, addOrbitCrowd, addFloor, textSprite,
+    scene: function () { return scene; },
     hex: function (h) { return parseInt(String(h || 0).replace("#", ""), 16); },
     hash: function (s) { var h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return h; },
     openModal, closeModal, go: function (id) {

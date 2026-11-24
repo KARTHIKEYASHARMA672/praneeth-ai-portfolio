@@ -1,5 +1,5 @@
 function scene_about() {
-  App.initScene({ active: "about", yaw: 0.3, pitch: 0.5, dist: 13, ty: 0.4, update: function () { scene.rotation.y += 0.0005; } });
+  App.initScene({ active: "about", yaw: 0.3, pitch: 0.5, dist: 13, ty: 0.4, update: function () { App.scene().rotation.y += 0.0005; } });
   App.addFloor({ w: 26, h: 16, y: 0, color: 0x0f1018 });
   App.addCubes([
     { x: -5.2, y: 1.4, z: 0, w: 1.2, h: 2.4, d: 1, color: 0xe3b34a },

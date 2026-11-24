@@ -1,5 +1,5 @@
 function scene_home() {
-  App.initScene({ active: "home", yaw: -0.35, pitch: 0.42, dist: 12, ty: 0.3, update: function () { scene.rotation.y += 0.0008; } });
+  App.initScene({ active: "home", yaw: -0.35, pitch: 0.42, dist: 12, ty: 0.3, update: function () { App.scene().rotation.y += 0.0008; } });
   var featured = DATA.projects.filter(function (p) { return p.featured; });
   App.addOrbitCrowd(10, 3.2, 0.2, function (i) {
     var p = featured[i % featured.length];
