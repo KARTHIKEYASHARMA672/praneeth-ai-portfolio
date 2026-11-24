@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><title>Skills — A. Praneeth Karthikeya Sharma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="viewport"><div class="canvas-wrap"></div>
+<div class="sec active" id="sec_skills">
+  <div class="section-hero">
+    <h1>My AI &amp; Tech Skills</h1>
+    <div class="grid cards" style="margin-top:1.4rem">
+      <div style="background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.4rem;">
+        <strong style="color:var(--acc3)">AI Agents &amp; Automation</strong><p class="l" style="color:var(--muted);font-size:.8rem">Autonomous agents, RAG, function calling, MCP</p><div style="color:var(--acc1);margin-top:.4rem">Deployed in 15+ production systems</div>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.4rem;">
+        <strong style="color:var(--acc3)">Prompt Engineering &amp; MCP</strong><p class="l" style="color:var(--muted);font-size:.8rem">LLM orchestration, tool calls, structured prompts</p>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.4rem;">
+        <strong style="color:var(--acc3)">LLM APIs (Gemini / OpenAI)</strong><p class="l" style="color:var(--muted);font-size:.8rem">Chat + function calling + embeddings</p>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.4rem;">
+        <strong style="color:var(--acc3)">AI + Edge IoT</strong><p class="l" style="color:var(--muted);font-size:.8rem">TinyML / TFLite load forecasting, smart edge systems</p>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.4rem;">
+        <strong style="color:var(--acc3)">Smart Sensors</strong><p class="l" style="color:var(--muted);font-size:.8rem">MQ-135, DHT22, LDR, BMP280, Arduino, ESP32, NodeMCU, Raspberry Pi</p>
+      </div>
+      <div style="background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.4rem;">
+        <strong style="color:var(--acc3)">AI for Traffic &amp; Env</strong><p class="l" style="color:var(--muted);font-size:.8rem">Predictive signal automation, air-quality monitoring</p>
+      </div>
+    </div>
+    <h2>AI Stack in 3D</h2>
+    <p class="l" style="color:var(--muted)">The floating AI blocks in space represent my core capabilities — orbit the scene to explore.</p>
+  </div>
+</div>
+</div>
+<div class="modal-overlay"><div class="modal"><h3></h3><div class="mod-tag"></div><p class="mod-desc"></p><div class="mod-links"></div><button class="close" onclick="App.closeModal()">&times;</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
+<script src="js/data.js"></script><script src="js/app.js"></script><script src="js/scene-skills.js"></script>
+<script>scene_skills();</script>
+</body>
+</html>
